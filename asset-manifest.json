@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/farsshop/static/css/main.783b415b.css",
+    "main.js": "/farsshop/static/js/main.d5e3559b.js",
+    "static/media/logo.jpg": "/farsshop/static/media/logo.fcdc26ecd505945a88f5.jpg",
+    "index.html": "/farsshop/index.html",
+    "main.783b415b.css.map": "/farsshop/static/css/main.783b415b.css.map",
+    "main.d5e3559b.js.map": "/farsshop/static/js/main.d5e3559b.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.783b415b.css",
+    "static/js/main.d5e3559b.js"
+  ]
+}
