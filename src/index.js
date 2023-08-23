@@ -13,3 +13,8 @@ root.render(
     </Context>
   </React.StrictMode>
 );
+
+// i cut these from the package.json file
+// "homepage": "https://Mustea08.github.io/farsshop",
+// "deploy": "gh-pages -d build"
+//"predeploy": "npm run build",

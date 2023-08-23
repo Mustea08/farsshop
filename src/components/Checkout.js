@@ -1,7 +1,8 @@
 import React from "react";
-import {Button} from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import { CartState } from "../context/Context";
 import { useState, useEffect } from "react";
+// import { useNavigate } from "react-router-dom";
 
 const Checkout = () => {
   const {
@@ -19,11 +20,12 @@ const Checkout = () => {
     );
   }, [cart]);
 
+
   return (
     <div>
       <div className="checkout">
         <div>
-          <form method="Post" action="https://formspree.io/f/xrgwevyy">
+          <form method="Post" action="https://formspree.io/f/xknljqqb">
             <div className="forms">
               {/* <!--SHIPPING METHOD--> */}
               <div className="panel panel-info">
@@ -104,7 +106,12 @@ const Checkout = () => {
                     </div>
                   </div>
 
-                  <Button type="submit" className="col-11 col-md-11 mx-3 my-2">
+                  <Button
+                    type="submit"
+                    className="col-11 col-md-11 mx-3 my-2"
+                    disabled={cart.length === 0}
+                  
+                  >
                     {" "}
                     Chekout
                   </Button>
@@ -120,13 +127,14 @@ const Checkout = () => {
               <span className="title"> SubTotal ({cart.length}) items</span>
               <span>
                 {cart.map((prod) => (
-                  <p>
+                  <p key={prod.id}>
                     {prod.name} : {prod.price} * {prod.qty}
                   </p>
                 ))}
               </span>
+              <span>Delivery Service: 50 EGY</span>
               <span style={{ fontWeight: 700, fontSize: 20 }}>
-                Total: {total} EGY
+                Total: {total + 50} EGY
               </span>
             </div>
           </div>

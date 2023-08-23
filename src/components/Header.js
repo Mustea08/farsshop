@@ -21,10 +21,16 @@ const Header = () => {
   } = CartState();
 
   return (
-    <Navbar bg="dark" variant="dark" style={{ height: 80 }}>
+    <Navbar
+      bg="dark"
+      variant="dark"
+      style={{ height: 80, position: "sticky", top: 0, zIndex: 2 }}
+    >
       <Container>
         <Navbar.Brand>
-          <Link to="/"><img src={logo} alt="logo" className="logo"/></Link>
+          <Link to="/">
+            <img src={logo} alt="logo" className="logo" />
+          </Link>
         </Navbar.Brand>
         <Navbar.Text className="search">
           <FormControl
@@ -82,7 +88,6 @@ const Header = () => {
             </Dropdown.Menu>
           </Dropdown> */}
 
-
           {/* i replace this to fit my desgin */}
 
           <Link to="/cart">
@@ -95,7 +100,6 @@ const Header = () => {
           </Link>
 
           {/* end of my desgin */}
-
         </Nav>
       </Container>
     </Navbar>
